@@ -7,10 +7,10 @@ import {
   simulateTerminalPayment,
 } from "../utils/paystack.js";
 
-// 🛒 PLACE ORDER
+// PLACE ORDER
 export const placeOrder = async (req, res) => {
   try {
-    console.log("🚀 placeOrder body:", req.body);
+    console.log("placeOrder body:", req.body);
 
     const { userId, items, address, email, paymentMethod, merchantId, terminalId } = req.body;
 
@@ -126,7 +126,7 @@ export const placeOrder = async (req, res) => {
   }
 };
 
-// 📋 GET USER ORDERS
+// GET USER ORDERS
 export const getUserOrders = async (req, res) => {
   try {
     const userId = req.user.id; // from authMiddleware
